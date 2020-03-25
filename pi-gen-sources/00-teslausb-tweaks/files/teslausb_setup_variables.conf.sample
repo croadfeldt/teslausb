@@ -118,10 +118,11 @@ export HEADLESS_SETUP=true
 # export aws_secret_key=put_your_secretkey_here
 # export aws_sns_topic_arn=put_your_sns_topicarn_here
 
-# Uncomment if you'd like to create a trigger file in the base archive directory once all clips have been transferred.
+# Uncomment if you'd like to create trigger files in the base archive directory once all clips have been transferred.
 # This is usefully if using https://github.com/ehendrix23/tesla_dashcam to further process clips.
 # Modify the value to your desired trigger filename.
-# export trigger_file=ARCHIVE_UPLOADED
+# export trigger_file_saved=ARCHIVE_UPLOADED
+# export trigger_file_sentry=ARCHIVE_UPLOADED
 
 # TeslaUSB can optionally use the Tesla API to keep your car awake, so it can
 # power the Pi long enough for the archiving process to complete. To enable
