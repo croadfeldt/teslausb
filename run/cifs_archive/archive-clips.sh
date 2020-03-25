@@ -81,8 +81,14 @@ connectionmonitor $$ &
 # new file name pattern, firmware 2019.*
 moveclips "$CAM_MOUNT/TeslaCam/SavedClips"
 
+# Create trigger file for SavedClips
+if [ ! -z ${trigger_file_saved+x} ] ; then touch "$CAM_MOUNT/TeslaCam/SentryClips/${trigger_file_saved}"; fi
+
 # v10 firmware adds a SentryClips folder
 moveclips "$CAM_MOUNT/TeslaCam/SentryClips"
+
+# Create trigger file for SentryClips
+if [ ! -z ${trigger_file_sentry+x} ] ; then touch "$CAM_MOUNT/TeslaCam/SentryClips/${trigger_file_sentry}"; fi
 
 kill %1
 
