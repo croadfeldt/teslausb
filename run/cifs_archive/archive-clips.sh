@@ -82,13 +82,13 @@ connectionmonitor $$ &
 moveclips "$CAM_MOUNT/TeslaCam/SavedClips"
 
 # Create trigger file for SavedClips
-if [ ! -z ${ARCHIVE_TRIGGER_SAVED+x} ] ; then log "Creating SavedClips Trigger File: $CAM_MOUNT/TeslaCam/SavedClips/${ARCHIVE_TRIGGER_SAVED}"; touch "$CAM_MOUNT/TeslaCam/SavedClips/${ARCHIVE_TRIGGER_SAVED}"; fi
+if [ ! -z ${ARCHIVE_TRIGGER_SAVED+x} ] ; then log "Creating SavedClips Trigger File: $ARCHIVE_MOUNT/SavedClips/${ARCHIVE_TRIGGER_SAVED}"; touch "$ARCHIVE_MOUNT/SavedClips/${ARCHIVE_TRIGGER_SAVED}"; fi
 
 # v10 firmware adds a SentryClips folder
 moveclips "$CAM_MOUNT/TeslaCam/SentryClips"
 
 # Create trigger file for SentryClips
-if [ ! -z ${ARCHIVE_TRIGGER_SENTRY+x} ] ; then log "Creating SentryClips Trigger File: $CAM_MOUNT/TeslaCam/SentryClips/${ARCHIVE_TRIGGER_SENTRY}"; touch "$CAM_MOUNT/TeslaCam/SentryClips/${ARCHIVE_TRIGGER_SENTRY}"; fi
+if [ ! -z ${ARCHIVE_TRIGGER_SENTRY+x} ] ; then log "Creating SentryClips Trigger File: $ARCHIVE_MOUNT/SentryClips/${ARCHIVE_TRIGGER_SENTRY}"; touch "$ARCHIVE_MOUNT/SentryClips/${ARCHIVE_TRIGGER_SENTRY}"; fi
 
 kill %1
 
